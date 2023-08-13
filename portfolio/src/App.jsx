@@ -6,9 +6,11 @@ function App() {
   const name = 'Hii! My name is Ionathan and im a Frontend Developer!';
   const carousel = useRef(null)
   const [headerBackground, setHeaderBackground] = useState('transparent');
+  const skills = useRef(null)
 
   useEffect(()=>{
     let count = 0
+    let srkoll = 0
     let timer = setInterval(() => {
       if (count < name.length - 1) {
         setInfo(prevInfo => prevInfo + name[count]);
@@ -24,11 +26,9 @@ function App() {
       } else {
         setHeaderBackground('transparent')
       }
-      
     };
-    
-    window.addEventListener('scroll', handleScroll);
 
+    window.addEventListener('scroll', handleScroll);
     // in case that it gets unmound we have to clean the interval
     return () => {clearInterval(timer),window.removeEventListener('scroll', handleScroll);}; 
   },[])
@@ -38,8 +38,15 @@ function App() {
         <header style={{backgroundColor: headerBackground}}>
           <div className='logo'>Logo</div>
           <nav>
-            <div>Home</div>
-            <div>Skills</div>
+            <div onClick ={()=> {
+                window.scroll({
+                  top: window.scrollY = 0,
+                  behavior: "smooth",
+            })}}>Home</div>
+            <div onClick={()=>{
+              skills.current.scrollIntoView({ behavior: 'smooth' });
+            }}>Skills</div>
+            
             <div>Projects</div>
           </nav>
           <div className='social-links'>
@@ -58,7 +65,7 @@ function App() {
           </div>
         </main>
         <article>
-          <div className="skills-div">
+          <div className="skills-div" ref={skills}>
             <h1>Skills</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aperiam culpa ratione quod eveniet mollitia nulla. Eos laborum, deserunt</p>
             <div className="carousel">
