@@ -185,3 +185,44 @@ section > div > img {
 .arrow:active {
     background-color: rgb(50, 49, 49);
 }
+
+summary {
+    padding-bottom: 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+summary > h1 {
+    color: white;
+    margin-top: 0;
+    padding-top: 55px;
+    text-align: center;
+    width: 80%;
+}
+
+summary > p {
+    color: rgb(187, 187, 187);
+    text-align: center;
+    width: 80%;
+    margin-bottom: 60px;
+}
+
+.projects > div > img {
+    width: 70%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.projects > div {
+    display: flex;
+    justify-content: center;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+}

@@ -4,13 +4,14 @@ function App() {
 
   const [info, setInfo] = useState('');
   const name = 'Hii! My name is Ionathan and im a Frontend Developer!';
-  const carousel = useRef(null)
+  const carousel = useRef(null);
   const [headerBackground, setHeaderBackground] = useState('transparent');
-  const skills = useRef(null)
+  const skills = useRef(null);
+  const projScroll = useRef(null);
+  const home = useRef(null);
 
   useEffect(()=>{
     let count = 0
-    let srkoll = 0
     let timer = setInterval(() => {
       if (count < name.length - 1) {
         setInfo(prevInfo => prevInfo + name[count]);
@@ -35,26 +36,26 @@ function App() {
   
   return (
     <div>
-        <header style={{backgroundColor: headerBackground}}>
+        <header  style={{backgroundColor: headerBackground}}>
           <div className='logo'>Logo</div>
           <nav>
-            <div onClick ={()=> {
-                window.scroll({
-                  top: window.scrollY = 0,
-                  behavior: "smooth",
-            })}}>Home</div>
+            <div onClick={()=>{
+              home.current.scrollIntoView({ behavior: 'smooth' });
+            }}>Home</div>
             <div onClick={()=>{
               skills.current.scrollIntoView({ behavior: 'smooth' });
             }}>Skills</div>
             
-            <div>Projects</div>
+            <div onClick={()=>{
+              projScroll.current.scrollIntoView({ behavior: 'smooth' })
+              }}>Projects</div>
           </nav>
           <div className='social-links'>
             <a href='https://www.linkedin.com/in/ionathan-sideras-072a60255' target='_blank'><img src='../public/linkedin.svg'/></a>
             <a href='https://github.com/ionathansideras' target='_blank'><img src='../public/github.svg'/></a>
           </div>
         </header>
-        <main>
+        <main ref={home}>
           <div>
             <div className="welcome">Welcome to my Portfolio</div>
             <h1>{info}</h1>
@@ -64,8 +65,8 @@ function App() {
             <img src="../public/astro.svg"/>  
           </div>
         </main>
-        <article>
-          <div className="skills-div" ref={skills}>
+        <article >
+          <div ref={skills} className="skills-div">
             <h1>Skills</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae aperiam culpa ratione quod eveniet mollitia nulla. Eos laborum, deserunt</p>
             <div className="carousel">
@@ -118,6 +119,28 @@ function App() {
             
           </div>
         </article>
+        <summary ref={projScroll}>
+          <h1>Projects</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero repellendus assumenda explicabo deserunt amet autem, ex minus nobis minima, illum dicta, asperiores perferendis delectus ullam voluptatem sequi corrupti consequatur numquam?</p>
+          <div className="projects">
+            <div>
+            <img src="../public/cart.jpg"/>
+
+            </div>
+            <div>
+            <img src="../public/chat.jpg"/>
+
+            </div>
+            <div>
+            <img src="../public/crypto.jpg"/>
+
+            </div>
+            <div>
+            <img src="../public/todo2.jpg"/>
+
+            </div>
+          </div>
+        </summary>
     </div>
   )
 }
