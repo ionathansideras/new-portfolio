@@ -22,6 +22,10 @@ header {
     transition: all 0.3s;
 }
 
+header > div {
+    width: 100px;
+}
+
 nav {
     width: 40%;
     display: flex;
@@ -32,7 +36,7 @@ nav {
 nav > div {
     color: rgb(187, 187, 187);
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.3s;  
 }
 
 nav > div:hover {
