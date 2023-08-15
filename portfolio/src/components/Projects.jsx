@@ -12,18 +12,59 @@ export default function Projects() {
           sequi corrupti consequatur numquam?
         </p>
         <div className="projects">
-          <div>
-            <img src="../public/cart.jpg" />
+
+          <div className='conteiner'>
+            <div className='group'>
+              <div className='cover'>
+                <p>Shopping Cart website</p>
+                <div>
+                  <a target="_blank" href="https://ionathansideras.github.io/cart/">Project</a>
+                  <a target="_blank" href="https://github.com/ionathansideras/cart/tree/main">code</a>
+                </div>
+              </div>
+              <img src="../public/cart.jpg" />
+            </div>
           </div>
-          <div>
-            <img src="../public/chat.jpg" />
+
+          <div className='conteiner'>
+            <div  className='group'>
+              <div className='cover'>
+                <p>Crypto website</p>
+                <div>
+                  <a target="_blank" href="https://ionathansideras.github.io/crypto/">Project</a>
+                  <a target="_blank" href="https://github.com/ionathansideras/crypto/tree/master">code</a>
+                </div>
+              </div>
+              <img src="../public/crypto.jpg" />
+            </div>
           </div>
-          <div>
-            <img src="../public/crypto.jpg" />
+
+          <div className='conteiner'>
+            <div className='group'>
+              <div className='cover'>
+                <p>Chat App website</p>
+                <div>
+                  <a target="_blank" href="https://ionathansideras.github.io/demo/">Project</a>
+                  <a target="_blank" href="https://github.com/ionathansideras/demo">code</a>
+                </div>
+              </div>
+              <img src="../public/chat.jpg" />
+            </div>
           </div>
-          <div>
-            <img src="../public/todo2.jpg" />
+
+          <div className='conteiner'>
+            <div className='group'>
+              <div className='cover'>
+                <p>ToDo website</p>
+                <div>
+                  <a target="_blank" href="https://ionathansideras.github.io/todo/">Project</a>
+                  <a target="_blank" href="https://github.com/ionathansideras/todo/tree/main/todo">code</a>
+                </div>
+              </div>
+              <img src="../public/todo2.jpg" />
+            </div>
           </div>
+
         </div>
       </summary>
     </div>
