@@ -5,7 +5,7 @@ import Carousel from "./components/Carousel";
 import Projects from './components/Projects';
 
 function App() {
-
+  
   return (
     <div>
       <Header />

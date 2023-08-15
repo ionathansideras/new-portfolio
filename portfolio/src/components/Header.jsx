@@ -1,18 +1,17 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useRef } from "react";
+import { useEffect } from "react";
 
 export default function Header() {
   
-  // State to manage the header background color
-  const [headerBackground, setHeaderBackground] = useState("transparent");
-
+  // ref to manage the header background color
+  const backGround = useRef(null);
   // Effect to update header background based on scroll position
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY !== 0) {
-        setHeaderBackground("rgb(17, 16, 16)"); // Change header background color on scroll
+        backGround.current.style.backgroundColor = "rgb(17, 16, 16)"; // Change header background color on scroll
       } else {
-        setHeaderBackground("transparent"); // Set header background to transparent when at the top
+        backGround.current.style.backgroundColor = "transparent"; // Set header background to transparent when at the top
       }
     };
 
@@ -32,7 +31,7 @@ export default function Header() {
   }
 
   return (
-    <header style={{ backgroundColor: headerBackground }}>
+    <header ref={backGround}>
       <div className="logo">Logo</div>
       <nav>
         <div
