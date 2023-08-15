@@ -61,6 +61,10 @@ export default function Carousel() {
                 <img src="../public/github-skills.svg" />
                 <p>GitHub</p>
               </div>
+              <div>
+                <img src="../public/firebase-icon.svg" />
+                <p>Firebase</p>
+              </div>
             </section>
             <h2
               className="arrow"
