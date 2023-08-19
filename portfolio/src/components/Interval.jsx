@@ -30,14 +30,12 @@ export default function Interval() {
  
   return (
     <main>
-      <div>
+      <div className="text-main">
         <div className="welcome">Welcome to my Portfolio</div>
         <h1>{info}</h1>
         <div className="info">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odit
           quia quod repellat, recusandae fuga eligendi modi cumque minus
-          doloremque perspiciatis at asperiores natus quae, deleniti blanditiis
-          consequuntur voluptatum. Ipsa.
         </div>
       </div>
       <div className="astro-div">
