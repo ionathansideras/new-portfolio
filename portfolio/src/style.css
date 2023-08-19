@@ -120,6 +120,7 @@ main > div > h1 {
     color: rgb(187, 187, 187);
 }
 
+  
 article {
     height: 400px;
     background-color: rgb(17, 16, 16);
@@ -315,7 +316,7 @@ summary > p {
         background-repeat: no-repeat;
         background-size: 300px;
         background-position-x: 40vw;
-        animation: moveBackground 8s infinite alternate;
+        animation: moveBackground 4s infinite alternate-reverse;
     }
 
     @keyframes moveBackground {
@@ -323,7 +324,7 @@ summary > p {
             background-position-y: 0%;
         }
         100% {
-            background-position-y: 100%;
+            background-position-y: 40%;
         }
     }
     
@@ -358,5 +359,11 @@ summary > p {
     
     .projects {
         grid-template-columns: 1fr;
+    }
+
+    article {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 100px;
     }
   }

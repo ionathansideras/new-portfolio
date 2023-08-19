@@ -37,8 +37,6 @@ export default function Interval() {
         <div className="info">
           Welcome to my corner of the web! I'm a passionate front-end developer 
           with a knack for turning lines of code into captivating user journeys.
-          With a palette of JavaScript, React, HTML, CSS, and a symphony of other tools,
-          I'm dedicated to building interfaces that leave a lasting impression
         </div>
       </div>
       <div className="astro-div">
