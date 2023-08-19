@@ -35,8 +35,10 @@ export default function Interval() {
         <div className="welcome">Welcome to my Portfolio</div>
         <h1>{info}</h1>
         <div className="info">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam odit
-          quia quod repellat, recusandae fuga eligendi modi cumque minus
+          Welcome to my corner of the web! I'm a passionate front-end developer 
+          with a knack for turning lines of code into captivating user journeys.
+          With a palette of JavaScript, React, HTML, CSS, and a symphony of other tools,
+          I'm dedicated to building interfaces that leave a lasting impression
         </div>
       </div>
       <div className="astro-div">

@@ -20,9 +20,7 @@ export default function Carousel() {
         <div className="skills-div">
           <h1>Skills</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-            aperiam culpa ratione quod eveniet mollitia nulla. Eos laborum,
-            deserunt
+            This is a carousel with some of the tools that i'm experienced with and work with in daily basis
           </p>
           <div className="carousel">
             <h2

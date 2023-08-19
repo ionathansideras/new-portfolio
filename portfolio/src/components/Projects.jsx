@@ -10,10 +10,13 @@ export default function Projects() {
       <summary>
         <h1>Projects</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-          repellendus assumenda explicabo deserunt amet autem, ex minus nobis
-          minima, illum dicta, asperiores perferendis delectus ullam voluptatem
-          sequi corrupti consequatur numquam?
+        Welcome to my projects section, where I'm excited to share the journey
+         of growth as a Front-end developer. These projects are a reflection
+          of my hands-on learning and passion for creating web interfaces. As I continue
+           to hone my skills in HTML, CSS, JavaScript and React, each project becomes a stepping
+            stone in my progress. Feel free to explore them every
+              click and line of code is a part of my learning story.
+
         </p>
         <div className="projects">
 
