@@ -1,4 +1,8 @@
 import React from 'react'
+import cart from '../assets/cart.jpg'
+import crypto from '../assets/crypto.jpg'
+import todo from '../assets/todo2.jpg'
+import chat from '../assets/chat.jpg'
 
 export default function Projects() {
   return (
@@ -22,7 +26,7 @@ export default function Projects() {
                   <a target="_blank" href="https://github.com/ionathansideras/cart/tree/main">code</a>
                 </div>
               </div>
-              <img src="../public/cart.jpg" />
+              <img src={cart} />
             </div>
           </div>
 
@@ -35,7 +39,7 @@ export default function Projects() {
                   <a target="_blank" href="https://github.com/ionathansideras/crypto/tree/master">code</a>
                 </div>
               </div>
-              <img src="../public/crypto.jpg" />
+              <img src={crypto} />
             </div>
           </div>
 
@@ -48,7 +52,7 @@ export default function Projects() {
                   <a target="_blank" href="https://github.com/ionathansideras/demo">code</a>
                 </div>
               </div>
-              <img src="../public/chat.jpg" />
+              <img src={chat} />
             </div>
           </div>
 
@@ -61,7 +65,7 @@ export default function Projects() {
                   <a target="_blank" href="https://github.com/ionathansideras/todo/tree/main/todo">code</a>
                 </div>
               </div>
-              <img src="../public/todo2.jpg" />
+              <img src={todo} />
             </div>
           </div>
 

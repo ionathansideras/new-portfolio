@@ -1,6 +1,14 @@
 import React from 'react'
 import { useRef } from "react";
-
+import js from '../assets/javascript.svg'
+import reactIcon from '../assets/react.svg'
+import css from '../assets/css-icon.svg'
+import html from '../assets/html-icon.svg'
+import git from '../assets/git-icon.svg'
+import npm from '../assets/npm.svg'
+import github from '../assets/github-skills.svg'
+import firebase from '../assets/firebase-icon.svg'
+import webpack from '../assets/webpack.svg'
 
 export default function Carousel() {
 
@@ -30,39 +38,39 @@ export default function Carousel() {
             </h2>
             <section ref={carousel}>
               <div>
-                <img src="../public/javascript.svg" />
+                <img src={js} />
                 <p>JavaScript</p>
               </div>
               <div>
-                <img src="../public/react.svg" />
+                <img src={reactIcon} />
                 <p>React</p>
               </div>
               <div>
-                <img src="../public/css-icon.svg" />
+                <img src={css} />
                 <p>Css</p>
               </div>
               <div>
-                <img src="../public/html-icon.svg" />
+                <img src={html} />
                 <p>Html</p>
               </div>
               <div>
-                <img src="../public/git-icon.svg" />
+                <img src={git} />
                 <p>Git</p>
               </div>
               <div>
-                <img src="../public/npm.svg" />
+                <img src={npm} />
                 <p>Npm</p>
               </div>
               <div>
-                <img src="../public/webpack.svg" />
+                <img src={webpack} />
                 <p>WebPack</p>
               </div>
               <div>
-                <img src="../public/github-skills.svg" />
+                <img src={github} />
                 <p>GitHub</p>
               </div>
               <div>
-                <img src="../public/firebase-icon.svg" />
+                <img src={firebase} />
                 <p>Firebase</p>
               </div>
             </section>

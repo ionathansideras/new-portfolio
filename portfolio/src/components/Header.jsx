@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { useEffect } from "react";
+import linkedin from '../assets/linkedin.svg'
+import github from '../assets/github.svg'
 
 export default function Header() {
   
@@ -55,10 +57,10 @@ export default function Header() {
           href="https://www.linkedin.com/in/ionathan-sideras-072a60255"
           target="_blank"
         >
-          <img src="../public/linkedin.svg" />
+          <img src={linkedin}/>
         </a>
         <a href="https://github.com/ionathansideras" target="_blank">
-          <img src="../public/github.svg" />
+          <img src={github} />
         </a>
       </div>
     </header>

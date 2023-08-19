@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import astro from '../assets/astro.svg'
 
 export default function Interval() {
 
@@ -39,7 +40,7 @@ export default function Interval() {
         </div>
       </div>
       <div className="astro-div">
-        <img src="../public/astro.svg" />
+        <img src={astro} />
       </div>
     </main>
   );
