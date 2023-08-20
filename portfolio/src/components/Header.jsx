@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import linkedin from '../assets/linkedin.svg'
 import github from '../assets/github.svg'
 
-export default function Header() {
+export default function Header({data}) {
   
   // ref to manage the header background color
   const backGround = useRef(null);
@@ -24,30 +24,26 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Function to smoothly scroll to a specified position
-  const skroll = (position) => {
-    window.scrollTo({
-      top: position,
-      behavior: "smooth",
-    });
-  }
-
   return (
     <header ref={backGround}>
       <div className="logo">Logo</div>
       <nav>
         <div
-          onClick={() => skroll(0)}
+          onClick={() =>
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          })}
         >
           Home
         </div>
         <div
-          onClick={() => skroll(500)}
+          onClick={() => data.dataCaousel.current?.scrollIntoView({ behavior: 'smooth'})}
         >
           Skills
         </div>
         <div
-         onClick={() => skroll(1050)}
+         onClick={() => data.dataProjects.current?.scrollIntoView({ behavior: 'smooth'})}
         >
           Projects
         </div>

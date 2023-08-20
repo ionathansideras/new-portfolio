@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import cart from '../assets/cart.jpg'
 import crypto from '../assets/crypto.jpg'
 import todo from '../assets/todo2.jpg'
 import chat from '../assets/chat.jpg'
 
-export default function Projects() {
+export default function Projects({onDataProjects}) {
+
+  const data = useRef(null)
+
+  useEffect(()=>{
+    onDataProjects(data)
+  },[])
+
   return (
     <div>
-      <summary>
+      <summary ref={data}>
         <h1>Projects</h1>
         <p>
         Welcome to my projects section, where I'm excited to share the journey

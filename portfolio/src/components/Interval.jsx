@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState, useEffect } from "react";
 import astro from '../assets/astro.svg'
 
@@ -9,11 +9,9 @@ export default function Interval() {
 
    // State to store the gradually revealed text
    const [info, setInfo] = useState("");
- 
    // Effect to reveal text gradually
    useEffect(() => {
      let count = 0;
- 
      // Set up an interval to add characters to the 'info' state
      let timer = setInterval(() => {
        if (count < name.length - 1) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRef } from "react";
 import js from '../assets/javascript.svg'
 import reactIcon from '../assets/react.svg'
@@ -10,13 +10,18 @@ import github from '../assets/github-skills.svg'
 import firebase from '../assets/firebase-icon.svg'
 import webpack from '../assets/webpack.svg'
 
-export default function Carousel() {
+export default function Carousel({onDataCarousel}) {
 
   const carousel = useRef(null);
+  const skills = useRef(null);
+
+  useState(()=>{
+    onDataCarousel(skills)
+  },[])
 
   return (
     <div>
-      <article>
+      <article ref={skills}>
         <div className="skills-div">
           <h1>Skills</h1>
           <p>
