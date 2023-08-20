@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Interval from "./components/Interval";
 import Carousel from "./components/Carousel";
 import Projects from './components/Projects';
+import Contact from "./components/Contact";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Interval />
       <Carousel onDataCarousel={setDataCarousel}/>
       <Projects onDataProjects={setDataprojects}/>
+      <Contact />
     </div>
   );
 }

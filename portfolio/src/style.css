@@ -61,6 +61,11 @@ nav > div:hover {
 
 .logo {
     color: white;
+    display: flex;
+}
+
+.color-h {
+    color: rgb(169, 81, 251);
 }
 
 main {
@@ -291,6 +296,43 @@ summary > p {
     background-color: rgb(142, 105, 175);
 }
 
+footer {
+    background-image: url('../public/backfill.png');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+}
+
+footer > div {
+    width: 50%;
+    color: white;
+}
+.footer-img2 {
+    width: 40px;
+    margin-left: 20px;
+}
+.footer-img1 {
+    width: 30px;
+    margin-right: 20px;
+}
+.img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-div > img {
+    width: 350px;
+    margin-right: 10px;
+}
+
 @media only screen and (min-width: 1000px) {
     section {
         width: 520px;
@@ -298,6 +340,23 @@ summary > p {
 }
 
 @media only screen and (max-width: 700px) {
+
+    footer {
+        flex-direction: column;
+    }
+    footer > div {
+        width: 100%;
+    }
+    .img-div > img {
+        width: 60%;
+        margin-top: 20px;
+    }
+    .contact-div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
 
     header {
         flex-wrap: wrap;

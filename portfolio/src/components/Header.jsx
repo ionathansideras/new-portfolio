@@ -26,7 +26,11 @@ export default function Header({data}) {
 
   return (
     <header ref={backGround}>
-      <div className="logo">Logo</div>
+      <div className="logo">
+        <p className="color-h">{'<'}</p>
+        <p>Jonathan</p>
+        <p>{"/>"}</p>
+      </div>
       <nav>
         <div
           onClick={() =>

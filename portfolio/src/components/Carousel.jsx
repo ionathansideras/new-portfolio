@@ -21,8 +21,8 @@ export default function Carousel({onDataCarousel}) {
 
   return (
     <div>
-      <article ref={skills}>
-        <div className="skills-div">
+      <article >
+        <div className="skills-div" ref={skills}>
           <h1>Skills</h1>
           <p>
             This is a carousel with some of the tools that i'm experienced with and work with in daily basis
