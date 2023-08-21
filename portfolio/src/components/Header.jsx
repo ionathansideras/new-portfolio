@@ -29,7 +29,7 @@ export default function Header({data}) {
       <div className="logo">
         <p className="color-h">{'<'}</p>
         <p>Jonathan</p>
-        <p>{"/>"}</p>
+        <p className="color-h">{"/>"}</p>
       </div>
       <nav>
         <div

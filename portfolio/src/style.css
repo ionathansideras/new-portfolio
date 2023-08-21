@@ -299,6 +299,8 @@ summary > p {
 footer {
     background-image: url('../public/backfill.png');
     background-color: black;
+    padding: 10px 0 10px 0;
+    height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -329,8 +331,9 @@ footer > div {
     justify-content: center;
 }
 .img-div > img {
-    width: 350px;
+    width: 0px;
     margin-right: 10px;
+    transition: all 0.9s ease;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -343,12 +346,14 @@ footer > div {
 
     footer {
         flex-direction: column;
+        padding-bottom: 30px;
+        height: 450px;
     }
     footer > div {
         width: 100%;
     }
     .img-div > img {
-        width: 60%;
+        width: 0px;
         margin-top: 20px;
     }
     .contact-div{
