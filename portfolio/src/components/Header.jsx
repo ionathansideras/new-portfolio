@@ -1,10 +1,9 @@
 import React, { useRef } from "react";
 import { useEffect } from "react";
-import linkedin from '../assets/linkedin.svg'
-import github from '../assets/github.svg'
+import linkedin from "../assets/linkedin.svg";
+import github from "../assets/github.svg";
 
-export default function Header({data}) {
-  
+export default function Header({ data }) {
   // ref to manage the header background color
   const backGround = useRef(null);
   // Effect to update header background based on scroll position
@@ -27,7 +26,7 @@ export default function Header({data}) {
   return (
     <header ref={backGround}>
       <div className="logo">
-        <p className="color-h">{'<'}</p>
+        <p className="color-h">{"<"}</p>
         <p>Jonathan</p>
         <p className="color-h">{"/>"}</p>
       </div>
@@ -35,19 +34,43 @@ export default function Header({data}) {
         <div
           onClick={() =>
             window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          })}
+              top: 0,
+              behavior: "smooth",
+            })
+          }
         >
           Home
         </div>
         <div
-          onClick={() => data.dataCaousel.current?.scrollIntoView({ behavior: 'smooth'})}
+          onClick={() => {
+            const element = data.dataCaousel.current;
+
+            // Calculate the target scroll position by subtracting 100 pixels
+            const targetScrollPosition =
+              element?.getBoundingClientRect().top + window.scrollY - 150;
+
+            // Scroll to the target position with smooth behavior
+            window.scrollTo({
+              top: targetScrollPosition,
+              behavior: "smooth",
+            });
+          }}
         >
           Skills
         </div>
         <div
-         onClick={() => data.dataProjects.current?.scrollIntoView({ behavior: 'smooth'})}
+          onClick={() => {
+            const element = data.dataProjects.current;
+            // Calculate the target scroll position by subtracting 100 pixels
+            const targetScrollPosition =
+              element?.getBoundingClientRect().top + window.scrollY - 50;
+
+            // Scroll to the target position with smooth behavior
+            window.scrollTo({
+              top: targetScrollPosition,
+              behavior: "smooth",
+            });
+          }}
         >
           Projects
         </div>
@@ -57,7 +80,7 @@ export default function Header({data}) {
           href="https://www.linkedin.com/in/ionathan-sideras-072a60255"
           target="_blank"
         >
-          <img src={linkedin}/>
+          <img src={linkedin} />
         </a>
         <a href="https://github.com/ionathansideras" target="_blank">
           <img src={github} />

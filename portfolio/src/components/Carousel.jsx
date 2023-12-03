@@ -1,31 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { useRef } from "react";
-import js from '../assets/javascript.svg'
-import reactIcon from '../assets/react.svg'
-import css from '../assets/css-icon.svg'
-import html from '../assets/html-icon.svg'
-import git from '../assets/git-icon.svg'
-import npm from '../assets/npm.svg'
-import github from '../assets/github-skills.svg'
-import firebase from '../assets/firebase-icon.svg'
-import webpack from '../assets/webpack.svg'
+import js from "../assets/javascript.svg";
+import reactIcon from "../assets/react.svg";
+import css from "../assets/css-icon.svg";
+import html from "../assets/html-icon.svg";
+import git from "../assets/git-icon.svg";
+import npm from "../assets/npm.svg";
+import github from "../assets/github-skills.svg";
+import firebase from "../assets/firebase-icon.svg";
+import webpack from "../assets/webpack.svg";
 
-export default function Carousel({onDataCarousel}) {
-
+export default function Carousel({ onDataCarousel }) {
   const carousel = useRef(null);
   const skills = useRef(null);
 
-  useState(()=>{
-    onDataCarousel(skills)
-  },[])
+  useState(() => {
+    onDataCarousel(skills);
+  }, []);
 
   return (
-    <div>
-      <article >
-        <div className="skills-div" ref={skills}>
+    <div ref={skills}>
+      <article>
+        <div className="skills-div">
           <h1>Skills</h1>
           <p>
-            This is a carousel with some of the tools that i'm experienced with and work with in daily basis
+            This is a carousel with some of the tools that i'm experienced with
+            and work with in daily basis
           </p>
           <div className="carousel">
             <h2
@@ -92,5 +92,5 @@ export default function Carousel({onDataCarousel}) {
         </div>
       </article>
     </div>
-  )
+  );
 }
