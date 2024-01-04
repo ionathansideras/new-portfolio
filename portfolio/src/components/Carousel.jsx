@@ -9,6 +9,11 @@ import npm from "../assets/npm.svg";
 import github from "../assets/github-skills.svg";
 import firebase from "../assets/firebase-icon.svg";
 import webpack from "../assets/webpack.svg";
+import redux from "../assets/redux.svg";
+import sass from "../assets/sass.svg";
+import cypress from "../assets/cypress.svg";
+import vite from "../assets/vite.svg";
+import jest from "../assets/jest.svg";
 
 export default function Carousel({ onDataCarousel }) {
   const carousel = useRef(null);
@@ -41,12 +46,20 @@ export default function Carousel({ onDataCarousel }) {
             </h2>
             <section ref={carousel}>
               <div>
+                <img src={reactIcon} />
+                <p>React</p>
+              </div>
+              <div>
                 <img src={js} />
                 <p>JavaScript</p>
               </div>
               <div>
-                <img src={reactIcon} />
-                <p>React</p>
+                <img src={redux} />
+                <p>Redux</p>
+              </div>
+              <div>
+                <img src={sass} />
+                <p>Sass</p>
               </div>
               <div>
                 <img src={css} />
@@ -57,12 +70,20 @@ export default function Carousel({ onDataCarousel }) {
                 <p>Html</p>
               </div>
               <div>
+                <img src={cypress} />
+                <p>Cypress</p>
+              </div>
+              <div>
                 <img src={git} />
                 <p>Git</p>
               </div>
               <div>
                 <img src={npm} />
                 <p>Npm</p>
+              </div>
+              <div>
+                <img src={vite} />
+                <p>Vite</p>
               </div>
               <div>
                 <img src={webpack} />
@@ -75,6 +96,10 @@ export default function Carousel({ onDataCarousel }) {
               <div>
                 <img src={firebase} />
                 <p>Firebase</p>
+              </div>
+              <div>
+                <img src={jest} />
+                <p>Jest</p>
               </div>
             </section>
             <h2

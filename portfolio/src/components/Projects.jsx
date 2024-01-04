@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import cart from "../assets/cart.jpg";
-import crypto from "../assets/crypto.jpg";
+import crypto from "../assets/my-cryptos.png";
 import todo from "../assets/my-todos.png";
 import chat from "../assets/chat.jpg";
 
@@ -27,46 +27,46 @@ export default function Projects({ onDataProjects }) {
           <div className="conteiner">
             <div className="group">
               <div className="cover">
-                <p>Shopping Cart website</p>
-                <div>
-                  <a
-                    target="_blank"
-                    href="https://ionathansideras.github.io/cart/"
-                  >
-                    Project
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://github.com/ionathansideras/cart/tree/main"
-                  >
-                    code
-                  </a>
-                </div>
-              </div>
-              <img src={cart} />
-            </div>
-          </div>
-
-          <div className="conteiner">
-            <div className="group">
-              <div className="cover">
                 <p>Crypto website</p>
                 <div>
                   <a
                     target="_blank"
-                    href="https://ionathansideras.github.io/crypto/"
+                    href="https://ionathansideras.github.io/my-cryptos/"
                   >
                     Project
                   </a>
                   <a
                     target="_blank"
-                    href="https://github.com/ionathansideras/crypto/tree/master"
+                    href="https://github.com/ionathansideras/my-cryptos"
                   >
                     code
                   </a>
                 </div>
               </div>
               <img src={crypto} />
+            </div>
+          </div>
+
+          <div className="conteiner">
+            <div className="group">
+              <div className="cover">
+                <p>ToDo website</p>
+                <div>
+                  <a
+                    target="_blank"
+                    href="https://ionathansideras.github.io/my-todos/"
+                  >
+                    Project
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/ionathansideras/my-todos"
+                  >
+                    code
+                  </a>
+                </div>
+              </div>
+              <img src={todo} />
             </div>
           </div>
 
@@ -93,28 +93,30 @@ export default function Projects({ onDataProjects }) {
             </div>
           </div>
 
+
           <div className="conteiner">
             <div className="group">
               <div className="cover">
-                <p>ToDo website</p>
+                <p>Shopping Cart website</p>
                 <div>
                   <a
                     target="_blank"
-                    href="https://ionathansideras.github.io/my-todos/"
+                    href="https://ionathansideras.github.io/cart/"
                   >
                     Project
                   </a>
                   <a
                     target="_blank"
-                    href="https://github.com/ionathansideras/my-todos"
+                    href="https://github.com/ionathansideras/cart/tree/main"
                   >
                     code
                   </a>
                 </div>
               </div>
-              <img src={todo} />
+              <img src={cart} />
             </div>
           </div>
+
         </div>
       </summary>
     </div>
