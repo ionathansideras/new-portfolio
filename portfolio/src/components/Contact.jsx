@@ -11,7 +11,7 @@ export default function Contact() {
   // Adding an effect that runs after the component has rendered.
   useEffect(() => {
     // Defining a function to handle scroll events.
-    const handleScroll = () => {
+    const handleTranfom = () => {
       // Getting the position of the icon image relative to the viewport.
       let position = icon.current.getBoundingClientRect();
 
@@ -27,15 +27,15 @@ export default function Contact() {
         // If the icon is in the viewport, increasing its width.
         icon.current.style.width = "350px";
         // Removing the scroll event listener since the desired condition is met.
-        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("scroll", handleTranfom);
       }
     };
 
-    window.addEventListener("scroll", handleScroll); // Add scroll event listener
+    window.addEventListener("scroll", handleTranfom); // Add scroll event listener
 
     return () => {
       // Removing the scroll event listener when the page unmounts
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleTranfom);
     };
   }, []);
 

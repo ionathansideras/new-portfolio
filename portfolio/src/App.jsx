@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useRef } from "react";
 import "./style.css";
 import Header from "./components/Header";
 import Interval from "./components/Interval";
@@ -7,16 +7,15 @@ import Projects from './components/Projects';
 import Contact from "./components/Contact";
 
 function App() {
+  const skills = useRef(null);
+  const projects = useRef(null);
 
-  const [dataCaousel, setDataCarousel] = useState('');
-  const [dataProjects, setDataprojects] = useState('')
-  
   return (
     <div>
-      <Header data={{dataCaousel, dataProjects}}/>
+      <Header data={{skills, projects}}/>
       <Interval />
-      <Carousel onDataCarousel={setDataCarousel}/>
-      <Projects onDataProjects={setDataprojects}/>
+      <Carousel skills={skills}/>
+      <Projects projects={projects}/>
       <Contact />
     </div>
   );

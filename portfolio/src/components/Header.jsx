@@ -1,14 +1,16 @@
 import React, { useRef } from "react";
 import { useEffect } from "react";
+import { handleScrollY } from "../helpers/handleScroll.js";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 
 export default function Header({ data }) {
   // ref to manage the header background color
   const backGround = useRef(null);
+
   // Effect to update header background based on scroll position
   useEffect(() => {
-    const handleScroll = () => {
+    const handleBackGround = () => {
       if (window.scrollY !== 0) {
         backGround.current.style.backgroundColor = "rgb(17, 16, 16)"; // Change header background color on scroll
       } else {
@@ -17,10 +19,10 @@ export default function Header({ data }) {
     };
 
     // Attach scroll event listener
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleBackGround);
 
     // Clean up by removing the scroll event listener when the component unmounts
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleBackGround);
   }, []);
 
   return (
@@ -41,37 +43,10 @@ export default function Header({ data }) {
         >
           Home
         </div>
-        <div
-          onClick={() => {
-            const element = data.dataCaousel.current;
-
-            // Calculate the target scroll position by subtracting 100 pixels
-            const targetScrollPosition =
-              element?.getBoundingClientRect().top + window.scrollY - 150;
-
-            // Scroll to the target position with smooth behavior
-            window.scrollTo({
-              top: targetScrollPosition,
-              behavior: "smooth",
-            });
-          }}
-        >
+        <div onClick={() => handleScrollY(data.skills.current, 150)}>
           Skills
         </div>
-        <div
-          onClick={() => {
-            const element = data.dataProjects.current;
-            // Calculate the target scroll position by subtracting 100 pixels
-            const targetScrollPosition =
-              element?.getBoundingClientRect().top + window.scrollY - 50;
-
-            // Scroll to the target position with smooth behavior
-            window.scrollTo({
-              top: targetScrollPosition,
-              behavior: "smooth",
-            });
-          }}
-        >
+        <div onClick={() => handleScrollY(data.projects.current, 50)}>
           Projects
         </div>
       </nav>

@@ -4,16 +4,10 @@ import crypto from "../assets/my-cryptos.png";
 import todo from "../assets/my-todos.png";
 import chat from "../assets/chat.jpg";
 
-export default function Projects({ onDataProjects }) {
-  const data = useRef(null);
-
-  useEffect(() => {
-    onDataProjects(data);
-  }, []);
-
+export default function Projects({ projects }) {
   return (
     <div>
-      <summary ref={data}>
+      <summary ref={projects}>
         <h1>Projects</h1>
         <p>
           Welcome to my projects section, where I'm excited to share the journey

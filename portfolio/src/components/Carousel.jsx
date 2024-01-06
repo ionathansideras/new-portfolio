@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { useRef } from "react";
+import React from "react";
+import { useRef, useState, useEffect } from "react";
+import { handleScrollX } from "../helpers/handleScroll";
 import js from "../assets/javascript.svg";
 import reactIcon from "../assets/react.svg";
 import css from "../assets/css-icon.svg";
@@ -15,13 +16,25 @@ import cypress from "../assets/cypress.svg";
 import vite from "../assets/vite.svg";
 import jest from "../assets/jest.svg";
 
-export default function Carousel({ onDataCarousel }) {
+export default function Carousel({ skills }) {
+  // Declare a ref variable 'carousel'
   const carousel = useRef(null);
-  const skills = useRef(null);
+  // Declare a state variable 'locked' with its setter function 'setLocked'.
+  const [locked, setLocked] = useState(false);
 
-  useState(() => {
-    onDataCarousel(skills);
-  }, []);
+  // Use the 'useEffect' hook to perform side effects.
+  useEffect(() => {
+    // If 'locked' is false, exit the effect without doing anything.
+    if (!locked) return;
+    // If 'locked' is true, set up an interval.
+    const handleLocked = setInterval(() => {
+      // Inside the interval, set 'locked' to false.
+      setLocked(false);
+      // Also inside the interval, clear the interval itself.
+      // This means the interval will only run once, 300 milliseconds after 'locked' is set to true.
+      clearInterval(handleLocked);
+    }, 300);
+  }, [locked]);
 
   return (
     <div ref={skills}>
@@ -36,10 +49,9 @@ export default function Carousel({ onDataCarousel }) {
             <h2
               className="arrow"
               onClick={() => {
-                carousel.current.scroll({
-                  left: carousel.current.scrollLeft - 130,
-                  behavior: "smooth",
-                });
+                if (locked) return;
+                handleScrollX(carousel.current, -130);
+                setLocked(true);
               }}
             >
               {"<"}
@@ -105,10 +117,9 @@ export default function Carousel({ onDataCarousel }) {
             <h2
               className="arrow"
               onClick={() => {
-                carousel.current.scroll({
-                  left: carousel.current.scrollLeft + 130,
-                  behavior: "smooth",
-                });
+                if (locked) return;
+                handleScrollX(carousel.current, 130);
+                setLocked(true);
               }}
             >
               {">"}
