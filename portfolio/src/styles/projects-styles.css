@@ -10,6 +10,7 @@ summary > h1 {
   color: white;
   margin-top: 0;
   padding-top: 55px;
+  font-size: 3vw;
   text-align: center;
   width: 80%;
 }
@@ -18,14 +19,15 @@ summary > p {
   color: rgb(187, 187, 187);
   text-align: center;
   width: 80%;
+  font-size: 1.5vw;
   margin-bottom: 60px;
 }
 
 .group > img {
   width: 100%;
-  height: 300px;
   object-fit: cover;
   border-radius: 20px;
+  height: 40vh;
 }
 
 .conteiner {
@@ -62,13 +64,14 @@ summary > p {
 }
 
 .group:hover .cover {
-  height: 300px;
+  height: 40vh;
   visibility: visible;
 }
 
 .cover > p {
   color: white;
   margin-bottom: 40px;
+  font-size: 1.5vw;
 }
 
 .cover > div > a {
@@ -76,6 +79,7 @@ summary > p {
   text-decoration: none;
   border: white 1px solid;
   padding: 10px;
+  font-size: 1.5vw;
   margin: 10px;
   transition: all 0.3s ease;
   border-radius: 5px;
@@ -89,4 +93,26 @@ summary > p {
   .projects {
     grid-template-columns: 1fr;
   }
+
+  
+summary > h1 {
+  font-size: 6vw;
+
+}
+
+summary > p {
+
+  font-size: 3.5vw;
+
+}
+
+  .cover > p {
+    font-size: 3.5vw;
+  }
+
+  .cover > div > a {
+    font-size: 3vw;
+  }
+  
+
 }

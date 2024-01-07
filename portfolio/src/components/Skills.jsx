@@ -32,7 +32,7 @@ export default function Carousel({ skills }) {
       let visible = carousel.current.getBoundingClientRect().top;
 
       // Check if the carousel is within the viewport
-      if (visible < window.innerHeight  && isVisible) {
+      if (visible < window.innerHeight && isVisible) {
         // Set isVisible to false to prevent the interval from being set again
         isVisible = false;
 

@@ -8,8 +8,8 @@ export default function Header({ data }) {
   // ref to manage the header background color
   const backGround = useRef(null);
 
-   // Effect to update header background based on scroll position
-   useEffect(() => {
+  // Effect to update header background based on scroll position
+  useEffect(() => {
     const handleBackGround = () => {
       if (window.scrollY !== 0) {
         backGround.current.style.backgroundColor = "transparent"; // Change header background color on scroll
@@ -22,9 +22,13 @@ export default function Header({ data }) {
 
     // Attach scroll event listener
     window.addEventListener("scroll", handleBackGround);
+    window.addEventListener("load", handleBackGround);
 
     // Clean up by removing the scroll event listener when the component unmounts
-    return () => window.removeEventListener("scroll", handleBackGround);
+    return () => {
+      window.removeEventListener("scroll", handleBackGround);
+      window.removeEventListener("load", handleBackGround);
+    };
   }, []);
 
   return (
