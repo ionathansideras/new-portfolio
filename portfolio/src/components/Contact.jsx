@@ -32,10 +32,12 @@ export default function Contact() {
     };
 
     window.addEventListener("scroll", handleTranfom); // Add scroll event listener
+    window.addEventListener("load", handleTranfom); // Add load event listener
 
     return () => {
       // Removing the scroll event listener when the page unmounts
       window.removeEventListener("scroll", handleTranfom);
+      window.removeEventListener("load", handleTranfom);
     };
   }, []);
 
