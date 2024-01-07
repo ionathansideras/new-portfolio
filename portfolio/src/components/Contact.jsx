@@ -25,7 +25,7 @@ export default function Contact() {
           (window.innerWidth || document.documentElement.clientWidth)
       ) {
         // If the icon is in the viewport, increasing its width.
-        icon.current.style.width = "25vw";
+        icon.current.style.transform = "scale(1)";
         // Removing the scroll event listener since the desired condition is met.
         window.removeEventListener("scroll", handleTranfom);
       }

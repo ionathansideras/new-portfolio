@@ -33,8 +33,9 @@ footer {
   .img-div > img {
     width: 0px;
     margin-right: 10px;
-    min-width: 300px;
+    width: 25vw;
     transition: all 0.9s ease;
+    transform: scale(0);
   }
 
   .contact-div p{
@@ -53,6 +54,7 @@ footer {
       }
       .img-div > img {
         width: 0px;
+        width: 60vw;
         margin-top: 20px;
       }
       .contact-div {
