@@ -2,7 +2,7 @@ footer {
     background-image: url("/backfill.png");
     background-color: black;
     padding: 10px 0 10px 0;
-    height: 300px;
+    height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -19,23 +19,26 @@ footer {
     width: 50%;
     color: white;
   }
-  .footer-img2 {
-    width: 40px;
+  .footer-img2,.footer-img1 {
+    height: 6vh;
     margin-left: 20px;
   }
-  .footer-img1 {
-    width: 30px;
-    margin-right: 20px;
-  }
+  
   .img-div {
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .img-div > img {
     width: 0px;
     margin-right: 10px;
+    min-width: 300px;
     transition: all 0.9s ease;
+  }
+
+  .contact-div p{
+    font-size: 2vw;
   }
   
 
@@ -57,5 +60,8 @@ footer {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+      }
+      .contact-div p{
+        font-size: 5vw;
       }
   }  

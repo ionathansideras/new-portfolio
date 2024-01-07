@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import man from "../assets/contact-img.svg";
 import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
+import linkedin from "../assets/linkedin2.svg";
 
 // Defining the Contact functional component.
 export default function Contact() {
@@ -25,7 +25,7 @@ export default function Contact() {
           (window.innerWidth || document.documentElement.clientWidth)
       ) {
         // If the icon is in the viewport, increasing its width.
-        icon.current.style.width = "350px";
+        icon.current.style.width = "25vw";
         // Removing the scroll event listener since the desired condition is met.
         window.removeEventListener("scroll", handleTranfom);
       }

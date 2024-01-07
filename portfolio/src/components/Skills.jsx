@@ -56,8 +56,8 @@ export default function Carousel({ skills }) {
 
     // Detach scroll event listener when the component unmounts
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-      window.removeEventListener("load", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("load", handleScroll);
     };
   }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
@@ -71,7 +71,7 @@ export default function Carousel({ skills }) {
               <div className="carousel">
                 <section ref={carousel}>
                   <div
-                    style={{ transform: count >= 1 ? "scale(1)" : "scale(0)"}}
+                    style={{ transform: count >= 1 ? "scale(1)" : "scale(0)" }}
                   >
                     <img src={reactIcon} />
                     <p>React</p>
@@ -114,7 +114,7 @@ export default function Carousel({ skills }) {
             <div className="tools">
               <h1>Tools</h1>
               <div className="carousel">
-                <section ref={carousel}>
+                <section>
                   <div
                     style={{ transform: count >= 1 ? "scale(1)" : "scale(0)" }}
                   >
@@ -139,7 +139,7 @@ export default function Carousel({ skills }) {
             <div className="testing">
               <h1>Testing</h1>
               <div className="carousel">
-                <section ref={carousel}>
+                <section>
                   <div
                     style={{ transform: count >= 1 ? "scale(1)" : "scale(0)" }}
                   >
