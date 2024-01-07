@@ -21,19 +21,3 @@ export function handleScrollY(element, pixels) {
     behavior: "smooth",
   });
 }
-
-// Export a function named 'handleScrollX'.
-// This function takes two arguments: 'element' and 'pixels'.
-export function handleScrollX(element, pixels) {
-  // Call the 'scroll' method on the 'element'.
-  // This method scrolls the element to a certain position.
-  element.scroll({
-    // The 'left' property sets the number of pixels that the content of 'element' is scrolled to the left.
-    // It is set to the current scroll position plus the 'pixels' argument.
-    left: element.scrollLeft + pixels,
-
-    // The 'behavior' property sets the scrolling behavior.
-    // It is set to "smooth", which means the scrolling will have an animation.
-    behavior: "smooth",
-  });
-}

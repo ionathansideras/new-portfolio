@@ -45,7 +45,7 @@ summary > p {
 }
 
 .cover {
-  background-image: url("../public/backfill.png");
+  background-image: url("/backfill.png");
   background-repeat: no-repeat;
   background-size: cover;
   visibility: hidden;
