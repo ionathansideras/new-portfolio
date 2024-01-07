@@ -31,10 +31,13 @@ export default function Interval() {
     <main>
       <div className="text-main">
         <div className="welcome">Welcome to my Portfolio</div>
-        <h1>{showText}</h1>
-        <div className="info">
-          Welcome to my corner of the web! I'm a passionate front-end developer
-          with a knack for turning lines of code into captivating user journeys.
+        <div className="text-info">
+          <h1>{showText}</h1>
+          <div className="info">
+            Welcome to my corner of the web! I'm a passionate front-end
+            developer with a knack for turning lines of code into captivating
+            user journeys.
+          </div>
         </div>
       </div>
       <div className="astro-div">
