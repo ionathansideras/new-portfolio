@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import cart from "../assets/cart-final2.png";
 import crypto from "../assets/crypto-final2.png";
 import todo from "../assets/todos-final2.png";
@@ -6,6 +6,9 @@ import chat from "../assets/chat-final2.png";
 
 export default function Projects({ projects }) {
   const [count, setCount] = useState(0);
+
+   // Refs for each project section
+   const projectsRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
 
   useEffect(() => {
     // Flag to check if the carousel is visible
@@ -34,8 +37,17 @@ export default function Projects({ projects }) {
           }
         }, 100);
       }
-    }
 
+      projectsRefs.forEach((projectsRef, index) => {
+        let visible = projectsRef.current.getBoundingClientRect().top;
+        // Adjust styling based on visibility
+        if (visible < window.innerHeight) {
+          projectsRef.current.style.opacity = "1";
+          projectsRef.current.style.transform = "scale(1)";
+        }
+      });
+    }
+ 
     // Attach scroll event listener when the component mounts
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("load", handleScroll);
@@ -74,7 +86,7 @@ export default function Projects({ projects }) {
           them every click and line of code is a part of my learning story.
         </p>
         <div className="projects">
-          <div className="container">
+          <div className="container" ref={projectsRefs[0]}>
             <div>
               <p>Crypto website</p>
               <div className="links">
@@ -96,7 +108,7 @@ export default function Projects({ projects }) {
             <img src={crypto} />
           </div>
 
-          <div className="container">
+          <div className="container" ref={projectsRefs[1]}>
             <div>
               <p>ToDo website</p>
               <div className="links">
@@ -117,7 +129,7 @@ export default function Projects({ projects }) {
             <img src={todo} />
           </div>
 
-          <div className="container">
+          <div className="container" ref={projectsRefs[2]}>
             <div>
               <p>Chat App website</p>
               <div className="links">
@@ -132,7 +144,7 @@ export default function Projects({ projects }) {
             <img src={chat} />
           </div>
 
-          <div className="container">
+          <div className="container" ref={projectsRefs[3]}>
             <div>
               <p>Shopping Cart website</p>
               <div className="links">
