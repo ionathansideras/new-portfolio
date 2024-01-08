@@ -55,6 +55,8 @@ main > div {
   padding: 10px 10px 10px 10px;
   border: white 1px solid;
   background-image: url("/backfill.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .info {
