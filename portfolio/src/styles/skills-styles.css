@@ -17,6 +17,7 @@ article {
   justify-content: space-evenly;
   flex-direction: column;
   width: 90%;
+  margin-bottom: 5vh;
 }
 
 .skills-1 {

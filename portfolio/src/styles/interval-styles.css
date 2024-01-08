@@ -68,20 +68,23 @@ main > div {
   }
   .text-main {
     width: 100%;
+    height: 90vh;
     padding: 20px;
     background-image: url("/astro.svg");
     background-repeat: no-repeat;
-    background-size: 300px;
-    background-position-x: 40vw;
-    animation: moveBackground 4s infinite alternate-reverse;
+    background-size: 90vw;
+    background-position-x: 14vw;
+    animation: moveBackground 9s infinite alternate-reverse;
+    /* Slow down the animation at 20% */
+    animation-timing-function: cubic-bezier(0.8, 0.2, 0.4, 0.2);
   }
-
+  
   @keyframes moveBackground {
     0% {
-      background-position-y: 0%;
+      background-position-y: 20%;
     }
     100% {
-      background-position-y: 40%;
+      background-position-y: 90%;
     }
   }
 
@@ -93,7 +96,7 @@ main > div {
   }
 
   .text-info {
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(0px); */
     border-radius: 30px;
     padding: 0 10px 0 10px;
     margin-top: 20px;
