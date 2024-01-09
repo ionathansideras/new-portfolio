@@ -1,0 +1,165 @@
+.resume-container {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10vh;
+    padding-top: 5vh;
+}
+
+.resume-title {
+    width: 70%;
+}
+
+.resume-title > h1 {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    /* Create a gradient for the text color */
+    background: linear-gradient(to right, rgb(222, 0, 148), rgb(74, 90, 255));
+    /* Apply the background as the text color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(80px);
+}
+
+.resume-title > p {
+    font-size: 3vw;
+    text-align: center;
+    /* Create a gradient for the text color */
+    background: linear-gradient(to right, rgb(222, 0, 148), rgb(74, 90, 255));
+    /* Apply the background as the text color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(80px);
+  }
+
+.resume-box {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/footer-back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 40px;
+    transform: translateX(-200%);
+    transition: all 1s ease-in-out;
+}
+
+.resume-box > img {
+    width: 40%;
+}
+
+.resume-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.resume-content > p {
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.download-button, .contact-button {
+    border: none;
+    border-radius: 10px;
+    padding: 1vw 1vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+.download-button {
+    background-color: #ff08ef;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.contact-button {
+    background-color: #ffffff;
+    color: #ff08ef;
+    display: flex;
+    align-items: center;
+}
+
+.download-button > img {
+    width: 2.5vw;
+    margin-right: 0.5vw;
+}
+.contact-button > img {
+    width: 2.5vw;
+    margin-right: 0.5vw;
+}
+
+@media only screen and (max-width: 700px) {
+    .resume-container {
+        padding-bottom: 20vh;
+    }
+
+    .resume-title > h1 {
+        font-size: 7vw;
+    }
+
+    .resume-title > p {
+        font-size: 7vw;
+    }
+
+    .resume-box {
+        width: 90%;
+        flex-direction: column-reverse;
+        padding: 5vh 0;
+    }
+
+    .resume-buttons {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .resume-box > img {
+        width: 60%;
+        margin-top: 5vh;
+    }
+
+    .resume-content {
+        width: 80%;
+    }
+
+    .resume-content > p {
+        font-size: 4vw;
+    }
+
+    .download-button, .contact-button {
+        font-size: 4vw;
+        padding: 1.5vh 0;
+        width: 80%;
+        justify-content: center;
+    }
+
+    .contact-button {
+        margin-top: 2vh;
+    }
+
+    .download-button > img, .contact-button > img {
+        width: 7vw;
+    }
+}

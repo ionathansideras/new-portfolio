@@ -21,3 +21,11 @@ export function handleScrollY(element, pixels) {
     behavior: "smooth",
   });
 }
+
+export function scrollToBottom() {
+  // scrolls to the bottom of the page
+  window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+  });
+}

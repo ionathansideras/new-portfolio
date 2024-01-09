@@ -55,6 +55,9 @@ export default function Header({ data }) {
         <div onClick={() => handleScrollY(data.projects.current, 50)}>
           Projects
         </div>
+        <div onClick={() => handleScrollY(data.resume.current, 10)}>
+          Resume
+        </div>
       </nav>
       <div className="social-links">
         <a

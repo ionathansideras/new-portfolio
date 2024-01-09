@@ -12,6 +12,7 @@ import cypress from "../assets/cypress.svg";
 import vite from "../assets/vite.svg";
 import jest from "../assets/jest.svg";
 import webpack from "../assets/webpack.svg";
+import useScrollEffect from "../hooks/useScrollEffect.jsx";
 
 export default function Carousel({ skills }) {
   // Declare a ref variable 'carousel'
@@ -20,46 +21,7 @@ export default function Carousel({ skills }) {
   // Initialize count state to 0
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    // Flag to check if the carousel is visible
-    let isVisible = true;
-    // Counter for the number of times the interval has run
-    let reps = 0;
-
-    // Function to handle scroll events
-    function handleScroll() {
-      // Get the top position of the carousel
-      let visible = carousel.current.getBoundingClientRect().top;
-
-      // Check if the carousel is within the viewport
-      if (visible < window.innerHeight && isVisible) {
-        // Set isVisible to false to prevent the interval from being set again
-        isVisible = false;
-
-        // Set the interval to change the carousel every 200 milliseconds
-        const timer = setInterval(() => {
-          // Increment count state
-          setCount((count) => count + 1);
-          // Increment reps
-          reps++;
-          // If reps reaches 6, clear the interval
-          if (reps === 6) {
-            clearInterval(timer);
-          }
-        }, 200);
-      }
-    }
-
-    // Attach scroll event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("load", handleScroll);
-
-    // Detach scroll event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("load", handleScroll);
-    };
-  }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
+  useScrollEffect(skills, setCount, 6);
 
   return (
     <div ref={skills}>
