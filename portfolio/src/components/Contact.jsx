@@ -15,7 +15,7 @@ export default function Contact() {
         <footer ref={contact}>
             <div className="contact">
                 <a
-                    href="www.linkedin.com/in/ionathan-sideras-072a60255"
+                    href="https://www.linkedin.com/in/ionathan-sideras-072a60255"
                     target="_blank"
                 >
                     <img

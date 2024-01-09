@@ -34,4 +34,7 @@ footer {
     .author {
         font-size: 3.5vw;
     }
+    .contact > a > img {
+        height: 5vh;
+    }
 }
