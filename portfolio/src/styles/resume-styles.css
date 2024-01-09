@@ -50,6 +50,7 @@
     border-radius: 40px;
     transform: translateX(-200%);
     transition: all 1s ease-in-out;
+    box-shadow: 0 0 20px #8e44ad, 0 0 10px #8e44ad, 0 0 38px #8e44ad;
 }
 
 .resume-box > img {
