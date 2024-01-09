@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import cart from "../assets/cart-final2.png";
 import crypto from "../assets/crypto-final2.png";
 import todo from "../assets/todos-final2.png";
@@ -7,7 +7,6 @@ import { handleTransform } from "../helpers/handleTransform.js";
 import useScrollEffect from "../hooks/useScrollEffect.jsx";
 
 export default function Projects({ projects }) {
-    const [count, setCount] = useState(0);
 
     // Refs for each project section
     const projectsRefs = [
@@ -16,7 +15,7 @@ export default function Projects({ projects }) {
         useRef(null),
         useRef(null),
     ];
-    useScrollEffect(projects, setCount, 5);
+    const {count} = useScrollEffect(projects, 5);
     
     useEffect(() => {
         // Function to handle scroll events

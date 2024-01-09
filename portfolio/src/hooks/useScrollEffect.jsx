@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-function useScrollEffect(element, setCount, limit) {
+function useScrollEffect(element, limit) {
+    const [count, setCount] = useState(0);
+
     useEffect(() => {
         let isVisible = true;
         let reps = 0;
@@ -27,6 +29,8 @@ function useScrollEffect(element, setCount, limit) {
             window.removeEventListener("load", handleScroll);
         };
     }, []);
+
+    return {count};
 }
 
 export default useScrollEffect;

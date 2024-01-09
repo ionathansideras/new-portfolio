@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import astro from "../assets/astro.svg";
 
-export default function Interval() {
+export default function Home() {
   // The text to be gradually revealed
   const text = "Hi! My name is Ionathan and i'm a Frontend Developer!";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef, useState, useEffect } from "react";
+import { useRef} from "react";
 import js from "../assets/javascript.svg";
 import reactIcon from "../assets/react.svg";
 import css from "../assets/css-icon.svg";
@@ -18,10 +18,7 @@ export default function Carousel({ skills }) {
   // Declare a ref variable 'carousel'
   const carousel = useRef(null);
 
-  // Initialize count state to 0
-  const [count, setCount] = useState(0);
-
-  useScrollEffect(skills, setCount, 6);
+  const {count} = useScrollEffect(skills, 6);
 
   return (
     <div ref={skills}>

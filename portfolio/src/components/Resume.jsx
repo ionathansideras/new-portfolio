@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import avatar from "../assets/question-mark.png";
 import cv from "../assets/Ionathan_Sideras_CV3.docx";
 import downloadIcon from "../assets/download.png";
@@ -8,11 +8,9 @@ import useScrollEffect from "../hooks/useScrollEffect.jsx";
 import { scrollToBottom } from "../helpers/handleScroll.js";
 
 export default function Resume({ resume }) {
-    const [count, setCount] = useState(0);
-
-    useScrollEffect(resume, setCount, 5);
-
     const resumeBox = useRef(null);
+
+    const {count} = useScrollEffect(resume, 5);
 
     useEffect(() => {
         // Function to handle scroll events

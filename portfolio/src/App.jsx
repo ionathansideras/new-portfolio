@@ -4,10 +4,10 @@ import "./styles/skills-styles.css";
 import "./styles/contact-styles.css";
 import "./styles/header-styles.css";
 import "./styles/projects-styles.css";
-import "./styles/interval-styles.css";
+import "./styles/home-styles.css";
 import "./styles/resume-styles.css";
 import Header from "./components/Header";
-import Interval from "./components/Interval";
+import Home from "./components/Home";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="all-content" ref={content}>
       <Header data={{ skills, projects, resume }} />
-      <Interval />
+      <Home />
       <Skills skills={skills} />
       <Projects projects={projects} />
       <Resume resume={resume} />
