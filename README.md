@@ -24,10 +24,10 @@ Welcome to my React portfolio! This portfolio is meticulously crafted with a dar
 
 ## 🚀 How to Use
 
-1. **Clone the repository:** `git clone https://github.com/ionathansideras/new-portfolio.git`
+1. **Clone the repository:** `git clone https://github.com/ionathansideras/react-portfolio.git`
 2. **Install dependencies:** `npm install`
 3. **Run the application:** `npm run dev`
-4. **Open the browser:** Navigate to `http://localhost:3000` to view the portfolio. 🌐
+4. **Open the browser:** Navigate to [http://localhost:5173/new-portfolio/](http://localhost:5173/new-portfolio/) to view the portfolio. 🌐
 
 ## 👩‍💻 Code Structure
 
@@ -35,3 +35,12 @@ Welcome to my React portfolio! This portfolio is meticulously crafted with a dar
 - **Vite Usage:** Leveraging Vite for a fast and efficient development experience.
 - **Custom Hooks:** Utilizing custom hooks for improved code modularity and reusability. 🧩
 
+## 🖼 Screenshots
+
+Include screenshots or GIFs showcasing different sections and interactions of your portfolio.
+
+## 🌟 Credits
+
+Give credit to any third-party libraries, tools, or resources used in building your portfolio.
+
+Feel free to explore my portfolio by visiting [https://ionathansideras.github.io/new-portfolio/](https://ionathansideras.github.io/new-portfolio/), and don't hesitate to reach out if you have any questions or feedback!
