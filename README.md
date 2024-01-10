@@ -35,12 +35,7 @@ Welcome to my React portfolio! This portfolio is meticulously crafted with a dar
 - **Vite Usage:** Leveraging Vite for a fast and efficient development experience.
 - **Custom Hooks:** Utilizing custom hooks for improved code modularity and reusability. 🧩
 
-## 🖼 Screenshots
 
-Include screenshots or GIFs showcasing different sections and interactions of your portfolio.
-
-## 🌟 Credits
-
-Give credit to any third-party libraries, tools, or resources used in building your portfolio.
+## 🌟 Link
 
 Feel free to explore my portfolio by visiting [https://ionathansideras.github.io/new-portfolio/](https://ionathansideras.github.io/new-portfolio/), and don't hesitate to reach out if you have any questions or feedback!
