@@ -20,15 +20,17 @@ nav {
   align-items: center;
 }
 
-nav > div {
+nav > button {
   color: rgb(187, 187, 187);
   cursor: pointer;
   transition: all 0.3s;
   margin: 0 10px 0 10px;
   font-size: 1.5vw;
+  background-color: transparent;
+  border: none;
 }
 
-nav > div:hover {
+nav > button:hover {
   color: white;
 }
 
@@ -84,7 +86,7 @@ nav > div:hover {
   }
 
   
-  nav > div {
+  nav > button {
     width: 60px;
     display: flex;
     font-size: 3.5vw;

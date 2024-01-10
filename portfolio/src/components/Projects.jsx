@@ -1,28 +1,30 @@
+// Import necessary dependencies
 import React, { useEffect, useRef } from "react";
-import cart from "../assets/cart-final2.png";
-import crypto from "../assets/crypto-final2.png";
-import todo from "../assets/todos-final2.png";
-import chat from "../assets/chat-final2.png";
 import { handleTransform } from "../helpers/handleTransform.js";
 import useScrollEffect from "../hooks/useScrollEffect.jsx";
+import projectData from "../data/projects.js";
 
+// Define the Projects component
 export default function Projects({ projects }) {
-
-    // Refs for each project section
+    // Create an array of refs for each project
     const projectsRefs = [
         useRef(null),
         useRef(null),
         useRef(null),
         useRef(null),
     ];
-    const {count} = useScrollEffect(projects, 5);
-    
+
+    // Use the custom useScrollEffect hook to get the scroll count
+    const { count } = useScrollEffect(projects, 5);
+
+    // Use the useEffect hook to add scroll and load event listeners
     useEffect(() => {
-        // Function to handle scroll events
+        // Define the scroll event handler
         function handleScroll() {
+            // For each project ref, check if it's visible
             projectsRefs.forEach((projectsRef, index) => {
                 let visible = projectsRef.current.getBoundingClientRect().top;
-                // Adjust styling based on visibility
+                // If the project is visible, change its opacity and scale
                 if (visible < window.innerHeight) {
                     projectsRef.current.style.opacity = "1";
                     projectsRef.current.style.transform = "scale(1)";
@@ -30,28 +32,25 @@ export default function Projects({ projects }) {
             });
         }
 
-        // Attach scroll event listener when the component mounts
+        // Add the scroll and load event listeners
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("load", handleScroll);
 
-        // Detach scroll event listener when the component unmounts
+        // Remove the event listeners when the component unmounts
         return () => {
             window.removeEventListener("scroll", handleScroll);
             window.removeEventListener("load", handleScroll);
         };
     }, []); // Empty dependency array means this effect runs once on mount and cleanup on unmount
 
+    // Render the component
     return (
         <div>
             <summary ref={projects}>
                 <h1 style={{ transform: handleTransform(1, 3, count) }}>
                     Projects
                 </h1>
-                <p
-                    style={{
-                        transform: handleTransform(2, 4, count),
-                    }}
-                >
+                <p style={{ transform: handleTransform(2, 4, count) }}>
                     Welcome to my projects section, where I'm excited to share
                     the journey of growth as a Front-end developer. These
                     projects are a reflection of my hands-on learning and
@@ -62,89 +61,30 @@ export default function Projects({ projects }) {
                     learning story.
                 </p>
                 <div className="projects">
-                    <div className="container" ref={projectsRefs[0]}>
-                        <div>
-                            <p>Crypto website</p>
-                            <div className="links">
-                                <a
-                                    target="_blank"
-                                    href="https://ionathansideras.github.io/my-cryptos/"
-                                >
-                                    Project
-                                </a>
-                                <a
-                                    target="_blank"
-                                    href="https://github.com/ionathansideras/my-cryptos"
-                                >
-                                    code
-                                </a>
+                    {/* Map over the project data and render a div for each project */}
+                    {projectData.map((project, index) => (
+                        <div
+                            className="container"
+                            key={index}
+                            ref={projectsRefs[index]}
+                        >
+                            <div>
+                                <p>{project.title}</p>
+                                <div className="links">
+                                    <a
+                                        target="_blank"
+                                        href={project.projectLink}
+                                    >
+                                        Project
+                                    </a>
+                                    <a target="_blank" href={project.codeLink}>
+                                        Code
+                                    </a>
+                                </div>
                             </div>
+                            <img src={project.imageSrc} alt={project.title} />
                         </div>
-                        <img src={crypto} />
-                    </div>
-
-                    <div className="container" ref={projectsRefs[1]}>
-                        <div>
-                            <p>ToDo website</p>
-                            <div className="links">
-                                <a
-                                    target="_blank"
-                                    href="https://ionathansideras.github.io/my-todos/"
-                                >
-                                    Project
-                                </a>
-                                <a
-                                    target="_blank"
-                                    href="https://github.com/ionathansideras/my-todos"
-                                >
-                                    code
-                                </a>
-                            </div>
-                        </div>
-                        <img src={todo} />
-                    </div>
-
-                    <div className="container" ref={projectsRefs[2]}>
-                        <div>
-                            <p>Chat App website</p>
-                            <div className="links">
-                                <a
-                                    target="_blank"
-                                    href="https://ionathansideras.github.io/demo/"
-                                >
-                                    Project
-                                </a>
-                                <a
-                                    target="_blank"
-                                    href="https://github.com/ionathansideras/demo"
-                                >
-                                    code
-                                </a>
-                            </div>
-                        </div>
-                        <img src={chat} />
-                    </div>
-
-                    <div className="container" ref={projectsRefs[3]}>
-                        <div>
-                            <p>Shopping Cart website</p>
-                            <div className="links">
-                                <a
-                                    target="_blank"
-                                    href="https://ionathansideras.github.io/cart/"
-                                >
-                                    Project
-                                </a>
-                                <a
-                                    target="_blank"
-                                    href="https://github.com/ionathansideras/cart/tree/main"
-                                >
-                                    code
-                                </a>
-                            </div>
-                        </div>
-                        <img src={cart} />
-                    </div>
+                    ))}
                 </div>
             </summary>
         </div>
