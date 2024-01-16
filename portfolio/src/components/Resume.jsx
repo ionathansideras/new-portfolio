@@ -1,6 +1,6 @@
 // Import necessary modules and assets
 import React, { useEffect, useRef } from "react";
-import avatar from "../assets/question-mark.png";
+import avatar from "../assets/me.png";
 import cv from "../assets/Ionathan_Sideras_CV3.docx";
 import downloadIcon from "../assets/download.png";
 import chatIcon from "../assets/chat.png";
