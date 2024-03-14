@@ -12,6 +12,7 @@ export default function Projects({ projects }) {
         useRef(null),
         useRef(null),
         useRef(null),
+        useRef(null),
     ];
 
     // Use the custom useScrollEffect hook to get the scroll count
