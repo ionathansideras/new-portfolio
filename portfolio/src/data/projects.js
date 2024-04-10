@@ -1,4 +1,3 @@
-import cart from "../assets/cart-final2.png";
 import crypto from "../assets/crypto-final2.png";
 import todo from "../assets/todos-final2.png";
 import chat from "../assets/chat-final2.png";
