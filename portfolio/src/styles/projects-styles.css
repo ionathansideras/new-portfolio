@@ -1,140 +1,155 @@
 summary {
-  padding: 5vh 0 10vh 0;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    padding: 5vh 0 10vh 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 summary > h1 {
-  color: white;
-  margin-top: 0;
-  padding-top: 55px;
-  font-size: 3vw;
-  text-align: center;
-  width: 80%;
-  transform: translateY(80px);
-  transition: all 0.3s ease-in-out;
+    color: white;
+    margin-top: 0;
+    padding-top: 55px;
+    font-size: 3vw;
+    text-align: center;
+    width: 80%;
+    transform: translateY(80px);
+    transition: all 0.3s ease-in-out;
 }
 
 summary > p {
-  color: rgb(187, 187, 187);
-  text-align: center;
-  width: 80%;
-  font-size: 1.5vw;
-  margin-bottom: 60px;
-  transform: translateY(80px);
-  transition: all 0.3s ease-in-out;
+    color: rgb(187, 187, 187);
+    text-align: center;
+    width: 80%;
+    font-size: 1.5vw;
+    margin-bottom: 60px;
+    transform: translateY(80px);
+    transition: all 0.3s ease-in-out;
 }
 
 .projects {
-  display: grid;
-  width: 90%;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 10vh;
-  column-gap: 10vw;
-  margin-top: 5vh;
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10vh;
+    column-gap: 10vw;
+    margin-top: 5vh;
 }
 
 .container {
-  position: relative;
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.9s ease-in-out;
+    position: relative;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.9s ease-in-out;
 }
 
 .container > img {
-  width: 100% ;
-  border-radius: 40px;
-  height: 100%;
+    width: 100%;
+    border-radius: 40px;
+    height: 100%;
 }
 
 .container > div {
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 0;
-  position: absolute;
-  justify-content: center;
-  border-radius: 40px;
-  transition: height 0.4s ease-in-out;
-  background-image: url('/backfill.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    position: absolute;
+    justify-content: center;
+    border-radius: 40px;
+    background-image: url("/backfill.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.4s ease-in-out;
 }
 
 .container:hover > div {
-  height: 100%;
-  visibility: visible;
+    height: 100%;
+    visibility: visible;
 }
 
 .container > div > p {
-  font-size: 2vw;
-  color: white;
-  text-align: center;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.container:hover > div > p {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .links {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  transform: scale(0.1);
-  transition: all 0.4s ease-in-out;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    transform: scale(0);
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
 }
 
 .links > a {
-  padding: 15px 20px;
-  border-radius: 20px;
-  background-color: rgb(0, 0, 0, 0.5);
-  color: white;
-  width: 30%;
-  text-align: center;
-  text-decoration: none;
-  font-size: 1.5vw;
+    padding: 15px 20px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    width: 30%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.links > a:hover {
+    background-color: rgba(20, 20, 20, 0.7);
+    transform: scale(1.1);
 }
 
 .container:hover > div > .links {
-  transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
 }
 
-
 @media only screen and (max-width: 700px) {
-  summary {
-    padding-top: 0;
-  }
-  .projects {
-    grid-template-columns: 1fr;
-    row-gap: 10vh;
-    column-gap: 0;
-  }
+    summary {
+        padding-top: 0;
+    }
+    .projects {
+        grid-template-columns: 1fr;
+        row-gap: 10vh;
+        column-gap: 0;
+    }
 
-  summary > h1 {
-    font-size: 7vw;
-  }
-  summary > p {
-    font-size: 4vw;
-  }
+    summary > h1 {
+        font-size: 7vw;
+    }
+    summary > p {
+        font-size: 4vw;
+    }
 
-  .container > img {
-    border-radius: 20px;
-  }
-  .container > div {
-    border-radius: 20px;
-  }
+    .container > img {
+        border-radius: 20px;
+    }
+    .container > div {
+        border-radius: 20px;
+    }
 
-  .container > div > p {
-    font-size: 4vw;
-  }
+    .container > div > p {
+        font-size: 4vw;
+    }
 
-  .links > a {
-    padding: 10px 15px;
-    border-radius: 10px;
-    width: 30%;
-    font-size: 3vw;
-  }
+    .links > a {
+        padding: 10px 15px;
+        border-radius: 10px;
+        width: 30%;
+        font-size: 3vw;
+    }
 }
