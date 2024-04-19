@@ -1,95 +1,104 @@
 header {
-  display: flex;
-  position: fixed;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  height: 10vh;
-  z-index: 100;
-  transition: all 0.3s;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    z-index: 100;
+    transition: all 0.3s;
 }
 
 header > div {
-  width: 100px;
+    width: 100px;
 }
 
 nav {
-  width: 40%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 nav > button {
-  color: rgb(187, 187, 187);
-  cursor: pointer;
-  transition: all 0.3s;
-  margin: 0 10px 0 10px;
-  font-size: 1.5vw;
-  background-color: transparent;
-  border: none;
+    color: rgb(187, 187, 187);
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: 0 10px 0 10px;
+    font-size: 1.5vw;
+    background-color: transparent;
+    border: none;
 }
 
 nav > button:hover {
-  color: white;
+    color: white;
+}
+
+nav > button:active {
+    transform: scale(0.9);
 }
 
 .social-links {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-right: 10px;
-  width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+    width: 30%;
+}
+
+.social-links > a {
+    transition: all 0.3s;
+}
+.social-links > a:active {
+    transform: scale(0.9);
 }
 
 .social-links > a > img {
-  margin: 0 10px 0 10px;
-  width: 2vw;
-  cursor: pointer;
+    margin: 0 10px 0 10px;
+    width: 2vw;
+    cursor: pointer;
 }
 
 .logo {
-  margin-left: 10px;
-  color: white;
-  display: flex;
-  width: 30%;
+    margin-left: 10px;
+    color: white;
+    display: flex;
+    width: 30%;
 }
 
 .logo > p {
-  font-size: 1.2vw;
+    font-size: 1.2vw;
 }
 
-
 .color-h {
-  color: rgb(169, 81, 251);
+    color: rgb(169, 81, 251);
 }
 
 @media only screen and (max-width: 700px) {
-  header {
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  header > div,
-  nav {
-    height: 50%;
-    width: 100%;
-  }
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
+    header {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    header > div,
+    nav {
+        height: 50%;
+        width: 100%;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
 
-  .logo > p {
-    font-size: 3.5vw;
-  }
+    .logo > p {
+        font-size: 3.5vw;
+    }
 
-  
-  nav > button {
-    width: 60px;
-    display: flex;
-    font-size: 3.5vw;
-    justify-content: center;
-  }
+    nav > button {
+        width: 60px;
+        display: flex;
+        font-size: 3.5vw;
+        justify-content: center;
+    }
 }

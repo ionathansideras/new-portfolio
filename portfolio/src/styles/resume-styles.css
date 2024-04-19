@@ -36,14 +36,14 @@
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     transform: translateY(80px);
-  }
+}
 
 .resume-box {
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/footer-back.jpg');
+    background-image: url("/footer-back.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -78,7 +78,8 @@
     width: 100%;
 }
 
-.download-button, .contact-button {
+.download-button,
+.contact-button {
     border: none;
     border-radius: 10px;
     padding: 1vw 1vw;
@@ -92,6 +93,15 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.download-button:hover {
+    background-color: #f852ed;
+}
+
+.download-button:active {
+    transform: scale(0.9);
 }
 
 .contact-button {
@@ -99,6 +109,15 @@
     color: #ff08ef;
     display: flex;
     align-items: center;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.contact-button:hover {
+    background-color: #eaeaea;
+}
+
+.contact-button:active {
+    transform: scale(0.9);
 }
 
 .download-button > img {
@@ -149,7 +168,8 @@
         font-size: 4vw;
     }
 
-    .download-button, .contact-button {
+    .download-button,
+    .contact-button {
         font-size: 4vw;
         padding: 1.5vh 0;
         width: 80%;
@@ -160,7 +180,8 @@
         margin-top: 2vh;
     }
 
-    .download-button > img, .contact-button > img {
+    .download-button > img,
+    .contact-button > img {
         width: 7vw;
     }
 }

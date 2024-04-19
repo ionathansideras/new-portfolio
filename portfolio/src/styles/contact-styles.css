@@ -24,6 +24,18 @@ footer {
     transition: transform 0.6s ease-in-out;
 }
 
+.contact > a {
+    transition: all 0.3s;
+}
+
+.contact > a:hover {
+    transform: scale(1.1);
+}
+
+.contact > a:active {
+    transform: scale(0.9);
+}
+
 .author {
     color: white;
     margin-bottom: 0;
