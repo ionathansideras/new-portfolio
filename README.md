@@ -27,7 +27,7 @@ Welcome to my React portfolio! This portfolio is meticulously crafted with a dar
 1. **Clone the repository:** `git clone https://github.com/ionathansideras/react-portfolio.git`
 2. **Install dependencies:** `npm install`
 3. **Run the application:** `npm run dev`
-4. **Open the browser:** Navigate to [http://localhost:5173/new-portfolio/](http://localhost:5173/new-portfolio/) to view the portfolio. 🌐
+4. **Open the browser:** Navigate to [https://www.ionathansideras.com/](https://www.ionathansideras.com/) to view the portfolio. 🌐
 
 ## 👩‍💻 Code Structure
 
