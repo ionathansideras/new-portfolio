@@ -44,7 +44,9 @@ export default function Header({ data }) {
                 <button onClick={() => handleScrollY(data.skills.current, 150)}>
                     Skills
                 </button>
-                <button onClick={() => handleScrollY(data.projects.current, 50)}>
+                <button
+                    onClick={() => handleScrollY(data.projects.current, 50)}
+                >
                     Projects
                 </button>
                 <button onClick={() => handleScrollY(data.resume.current, 10)}>
@@ -56,10 +58,10 @@ export default function Header({ data }) {
                     href="https://www.linkedin.com/in/ionathan-sideras-072a60255"
                     target="_blank"
                 >
-                    <img src={linkedin} />
+                    <img src={linkedin} alt="linkedin" />
                 </a>
                 <a href="https://github.com/ionathansideras" target="_blank">
-                    <img src={github} />
+                    <img src={github} alt="github" />
                 </a>
             </div>
         </header>

@@ -37,7 +37,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={reactIcon} />
+                                        <img
+                                            src={reactIcon}
+                                            alt="React-icon"
+                                            loading="lazy"
+                                        />
                                         <p>React</p>
                                     </div>
                                     <div
@@ -48,7 +52,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={js} />
+                                        <img
+                                            src={js}
+                                            alt="JavaScript-icon"
+                                            loading="lazy"
+                                        />
                                         <p>JavaScript</p>
                                     </div>
                                     <div
@@ -59,7 +67,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={typescript} />
+                                        <img
+                                            src={typescript}
+                                            alt="TypeScript-icon"
+                                            loading="lazy"
+                                        />
                                         <p>TypeScript</p>
                                     </div>
                                     <div
@@ -70,7 +82,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={sass} />
+                                        <img
+                                            src={sass}
+                                            alt="Sass-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Sass</p>
                                     </div>
                                     <div
@@ -81,7 +97,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={css} />
+                                        <img
+                                            src={css}
+                                            alt="Css-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Css</p>
                                     </div>
                                     <div
@@ -92,7 +112,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={html} />
+                                        <img
+                                            src={html}
+                                            alt="Html-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Html</p>
                                     </div>
                                 </section>
@@ -112,7 +136,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={firebase} />
+                                        <img
+                                            src={firebase}
+                                            alt="Firebase-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Firebase</p>
                                     </div>
                                     <div
@@ -134,7 +162,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={redux} />
+                                        <img
+                                            src={redux}
+                                            alt="Redux-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Redux</p>
                                     </div>
                                 </section>
@@ -152,7 +184,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={cypress} />
+                                        <img
+                                            src={cypress}
+                                            alt="Cypress-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Cypress</p>
                                     </div>
                                     <div
@@ -163,7 +199,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={jest} />
+                                        <img
+                                            src={jest}
+                                            alt="Jest-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Jest</p>
                                     </div>
                                     <div
@@ -174,7 +214,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={vitest} />
+                                        <img
+                                            src={vitest}
+                                            alt="Vitest-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Vitest</p>
                                     </div>
                                 </section>

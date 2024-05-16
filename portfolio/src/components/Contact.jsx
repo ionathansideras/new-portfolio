@@ -9,7 +9,7 @@ import useScrollEffect from "../hooks/useScrollEffect";
 export default function Contact() {
     const contact = useRef(null);
 
-    const {count} = useScrollEffect(contact, 4);
+    const { count } = useScrollEffect(contact, 4);
 
     return (
         <footer ref={contact}>
@@ -23,6 +23,8 @@ export default function Contact() {
                         style={{
                             transform: count >= 1 ? "scale(1)" : "scale(0)",
                         }}
+                        alt="linkedin"
+                        loading="lazy"
                     />
                 </a>
                 <a href="https://github.com/ionathansideras" target="_blank">
@@ -31,6 +33,8 @@ export default function Contact() {
                         style={{
                             transform: count >= 2 ? "scale(1)" : "scale(0)",
                         }}
+                        alt="github"
+                        loading="lazy"
                     />
                 </a>
                 <a href="mailto:iona8ansideras@gmail.com" target="_blank">
@@ -39,6 +43,8 @@ export default function Contact() {
                         style={{
                             transform: count >= 3 ? "scale(1)" : "scale(0)",
                         }}
+                        alt="gmail"
+                        loading="lazy"
                     />
                 </a>
                 <a href="https://twitter.com/IonathanSi28164" target="_blank">
@@ -47,6 +53,8 @@ export default function Contact() {
                         style={{
                             transform: count >= 4 ? "scale(1)" : "scale(0)",
                         }}
+                        alt="twitter"
+                        loading="lazy"
                     />
                 </a>
             </div>

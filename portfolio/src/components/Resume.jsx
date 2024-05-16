@@ -14,7 +14,7 @@ export default function Resume({ resume }) {
     const resumeBox = useRef(null);
 
     // Use the custom scroll effect hook and get the count value
-    const {count} = useScrollEffect(resume, 5);
+    const { count } = useScrollEffect(resume, 5);
 
     // Use the useEffect hook to handle scroll events
     useEffect(() => {
@@ -51,7 +51,7 @@ export default function Resume({ resume }) {
                 </p>
             </div>
             <div className="resume-box" ref={resumeBox}>
-                <img src={avatar} />
+                <img src={avatar} alt="avatar-bit-emoji" loading="lazy" />
                 <div className="resume-content">
                     <p>
                         If you still have any questions, feel free to contact

@@ -84,7 +84,11 @@ export default function Projects({ projects }) {
                                     </a>
                                 </div>
                             </div>
-                            <img src={project.imageSrc} alt={project.title} />
+                            <img
+                                src={project.imageSrc}
+                                alt={project.title}
+                                loading="lazy"
+                            />
                         </div>
                     ))}
                 </div>
