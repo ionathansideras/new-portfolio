@@ -59,14 +59,22 @@ export default function Resume({ resume }) {
                     </p>
                     <div className="resume-buttons">
                         <a href={cv} download className="download-button">
-                            <img src={downloadIcon} />
+                            <img
+                                src={downloadIcon}
+                                alt="download-button-img"
+                                loading="lazy"
+                            />
                             Download CV
                         </a>
                         <button
                             onClick={scrollToBottom}
                             className="contact-button"
                         >
-                            <img src={chatIcon} />
+                            <img
+                                src={chatIcon}
+                                alt="info-button-img"
+                                loading="lazy"
+                            />
                             Contact me
                         </button>
                     </div>

@@ -151,7 +151,11 @@ export default function Carousel({ skills }) {
                                                     : "scale(0)",
                                         }}
                                     >
-                                        <img src={vite} />
+                                        <img
+                                            src={vite}
+                                            alt="Vite-icon"
+                                            loading="lazy"
+                                        />
                                         <p>Vite</p>
                                     </div>
                                     <div
