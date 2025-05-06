@@ -1,16 +1,22 @@
 import crypto from "../assets/crypto-final2.png";
 import todo from "../assets/todos-final2.png";
 import chat from "../assets/chat-final2.png";
-import truckmate from "../assets/truckmate.png";
+import iphone from "../assets/iphone.png";
 import videoCall from "../assets/videocall.png";
 import porsche from "../assets/porsche.png";
 
 const projectData = [
     {
-        title: "Video Chat App",
-        projectLink: "https://soloconvo.vercel.app/",
-        codeLink: "https://github.com/ionathansideras/videoCall",
-        imageSrc: videoCall,
+        title: "Crypto website",
+        projectLink: "https://ionathansideras.github.io/my-cryptos/",
+        codeLink: "https://github.com/ionathansideras/my-cryptos",
+        imageSrc: crypto,
+    },
+    {
+        title: "Iphone clone website",
+        projectLink: "https://3d-iphone15pro.vercel.app/",
+        codeLink: "https://github.com/ionathansideras/3d-iphone-website",
+        imageSrc: iphone,
     },
     {
         title: "Porsche Configurator",
@@ -19,16 +25,10 @@ const projectData = [
         imageSrc: porsche,
     },
     {
-        title: "Crypto website",
-        projectLink: "https://ionathansideras.github.io/my-cryptos/",
-        codeLink: "https://github.com/ionathansideras/my-cryptos",
-        imageSrc: crypto,
-    },
-    {
-        title: "Wait list website",
-        projectLink: "https://www.truckmate.gr/",
-        codeLink: "https://github.com/ionathansideras/truckMate",
-        imageSrc: truckmate,
+        title: "Video Chat App",
+        projectLink: "https://soloconvo.vercel.app/",
+        codeLink: "https://github.com/ionathansideras/videoCall",
+        imageSrc: videoCall,
     },
     {
         title: "ToDo website",
