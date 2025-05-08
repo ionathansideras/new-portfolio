@@ -38,4 +38,4 @@ Welcome to my React portfolio! This portfolio is meticulously crafted with a dar
 
 ## 🌟 Link
 
-Feel free to explore my portfolio by visiting [https://ionathansideras.github.io/new-portfolio/](https://ionathansideras.github.io/new-portfolio/), and don't hesitate to reach out if you have any questions or feedback!
+Feel free to explore my portfolio by visiting [https://ionathansideras.com](https://ionathansideras.com), and don't hesitate to reach out if you have any questions or feedback!
