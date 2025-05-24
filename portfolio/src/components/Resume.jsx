@@ -1,7 +1,6 @@
 // Import necessary modules and assets
 import React, { useEffect, useRef } from "react";
 import avatar from "../assets/me.png";
-import cv from "../assets/Ionathan_Sideras_CV3.docx";
 import downloadIcon from "../assets/download.png";
 import chatIcon from "../assets/chat.png";
 import { handleTransform } from "../helpers/handleTransform.js";
@@ -58,7 +57,7 @@ export default function Resume({ resume }) {
                         me. Additionally, you can download my resume below.
                     </p>
                     <div className="resume-buttons">
-                        <a href={cv} download className="download-button">
+                        <a className="download-button">
                             <img
                                 src={downloadIcon}
                                 alt="download-button-img"
